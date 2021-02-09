@@ -1,0 +1,271 @@
+/*#==============================
+# Imports
+#==============================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+/*#==============================
+# Base Elements Style
+#==============================*/
+
+*::before,
+*::after,
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --oswald: 'Oswald', sans-serif;
+  --montserrat: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--montserrat);
+  font-size: 1.3125rem;
+  line-height: 1.6;
+  color: #3A3A3A;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+/*#==============================
+# Author Styles
+#==============================*/
+
+/* .l-row {
+  display: flex;
+} */
+
+.l-container {
+  max-width: 1228px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.l-intro {
+  background-color: #2E323F;
+}
+
+.l-nav {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+  display: none;
+}
+
+.c-menu__list + .c-menu__list,
+.c-menu + .c-menu {
+  margin-left: 2em;
+}
+
+.c-menu__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+}
+
+.c-btn {
+  border: 0;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  background-color: #A59678;
+  padding: .1em 1em;
+  border-radius: 100px;
+}
+
+.c-btn:focus,
+.c-btn:hover {
+  opacity: .75;
+}
+
+.l-hero {
+  background-color: #3B4050;
+  padding: 5em 0;
+}
+
+.l-hero h2 {
+  font-family: var(--oswald);
+  font-size: 80px;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.l-hero h2 span {
+  color: #A59678;
+}
+
+.l-hero .l-col:nth-child(2) {
+  color: whitesmoke;
+}
+
+.l-hero .l-col:nth-child(2) .c-btn {
+  font-size: 27px;
+  padding: .75em 1.5em;
+  font-family: var(--oswald);
+}
+
+.l-first-section {
+  background-color: whitesmoke;
+  padding: 3em 0;
+}
+
+.l-first-section h2,
+.l-blog-post h2,
+.l-sidebar section h2 {
+  font-family: var(--oswald);
+  font-size: 2.5rem;
+  color: #A59678;
+}
+
+.l-second-section {
+  padding: 3em 0;
+}
+
+.l-sidebar section {
+  background-color: #2E323F;
+  padding: 1em;
+}
+
+.l-sidebar section h2 {
+  color: #fff;
+}
+
+.l-sidebar section p {
+  color: whitesmoke;
+}
+
+.l-col + .l-col {
+  margin-top: 1em;
+}
+
+.l-footer {
+  background-color: #3B4050;
+  padding: 3em 0;
+}
+
+.l-footer h2 {
+  font-family: var(--oswald);
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.l-footer h3 {
+  font-family: var(--oswald);
+  font-size: 1.5rem;
+  color: #A59678;
+}
+
+.l-footer .l-col:first-child p {
+  color: whitesmoke;
+}
+
+.l-footer .l-col {
+  margin-bottom: 2em;
+}
+
+.l-footer .l-col li {
+  margin-bottom: .5em;
+}
+
+.l-footer .l-col a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+@media (min-width: 930px) {
+  .l-footer .l-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .l-footer h2 {
+    text-align: center;
+  }
+
+  .l-footer .l-row .l-col {
+    margin: 0;
+    width: 15%;
+  }
+
+  .l-footer .l-row .l-col:first-child {
+    width: 50%;
+  }
+
+
+  .l-footer .l-row .l-col + .l-col {
+    margin-left: 2em;
+  }
+}
+
+@media (min-width: 1100px) {
+  .l-nav,
+  .l-nav .l-row,
+  .l-hero .l-row,
+  .l-first-section .l-row,
+  .l-second-section .l-row {
+    display: flex;
+  }
+
+  .l-hero .l-row {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .l-hero .l-col,
+  .l-first-section .l-col {
+    width: 100%;
+  }
+
+  .l-hero .l-col + .l-col {
+    margin-left: 1em;
+  }
+
+  .l-first-section .l-col + .l-col {
+    margin-left: 3em;
+  }
+
+  .l-first-section .l-col {
+    margin: 0;
+    text-align: center;
+  }
+
+  .l-second-section .l-col + .l-col {
+    margin-left: 2em;
+  }
+
+  .l-sidebar .l-col + .l-col{
+    margin: 0;
+  }
+
+  .l-sidebar .l-col + .l-col{
+    margin-top: 1em;
+  }
+}
